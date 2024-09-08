@@ -1,26 +1,58 @@
-const express = require('express');
-const { Client, Intents } = require('discord.js');
-const app = express();
-app.use(express.json());
+/* main.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-app.post('/api/login', async (req, res) => {
-    const { token } = req.body;
-    const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+#login-screen, #dashboard {
+    text-align: center;
+}
 
-    try {
-        await client.login(token);
+#login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        const user = client.user;
-        const guilds = client.guilds.cache.map(guild => ({
-            id: guild.id,
-            name: guild.name,
-            iconURL: guild.iconURL() || 'https://via.placeholder.com/64'
-        }));
+.hidden {
+    display: none;
+}
 
-        res.json({ user: { id: user.id, username: user.username }, guilds });
-    } catch (error) {
-        res.status(401).json({ message: 'Invalid token' });
-    }
-});
+#guild-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-app.listen(3001, () => console.log('API server running on http://localhost:3001'));
+.guild-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guild-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.guild-box p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333333;
+}
