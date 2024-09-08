@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Dictionary API</title>
-    <script>
-        async function fetchDefinition() {
-            const query = document.getElementById('query').value;
-            const response = await fetch(`/urban?query=${encodeURIComponent(query)}`);
-            const data = await response.json();
-            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
-        }
-    </script>
+    <title>Discord Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Urban Dictionary Lookup</h1>
-    <input type="text" id="query" placeholder="Enter a word or phrase" />
-    <button onclick="fetchDefinition()">Search</button>
-    <pre id="result"></pre>
+    <div id="login-screen">
+        <h2>Please enter your Discord token to login</h2>
+        <input type="password" id="token-input" placeholder="Your Discord Token">
+        <button id="login-button">Login</button>
+        <p id="error-message"></p>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <h1>Welcome to Your Dashboard</h1>
+        <p><strong>User ID:</strong> <span id="user-id"></span></p>
+        <p><strong>Username:</strong> <span id="user-name"></span></p>
+        <p><strong>Servers (Guilds):</strong> <span id="server-count"></span></p>
+        <button id="logout-button">Logout</button>
+    </div>
 </body>
 </html>
