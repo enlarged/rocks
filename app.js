@@ -9,7 +9,7 @@ document.getElementById('login-button').addEventListener('click', async () => {
     try {
         // Fetch user details
         const userResponse = await fetch('https://discord.com/api/v10/users/@me', {
-            headers: { 'Authorization': token }
+            headers: { 'Authorization': `Bot ${token}` }
         });
 
         if (!userResponse.ok) {
@@ -23,7 +23,7 @@ document.getElementById('login-button').addEventListener('click', async () => {
 
         // Fetch user's guilds
         const guildResponse = await fetch('https://discord.com/api/v10/users/@me/guilds', {
-            headers: { 'Authorization': token }
+            headers: { 'Authorization': `Bot ${token}` }
         });
 
         if (!guildResponse.ok) {
@@ -33,6 +33,15 @@ document.getElementById('login-button').addEventListener('click', async () => {
 
         const guildsData = await guildResponse.json();
         document.getElementById('server-count').textContent = guildsData.length;
+
+        // Populate guilds list
+        const guildList = document.getElementById('guild-list');
+        guildList.innerHTML = guildsData.map(guild => `
+            <div class="guild-box">
+                <img src="${guild.icon ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png` : 'https://via.placeholder.com/64'}" alt="${guild.name} icon">
+                <p>${guild.name}</p>
+            </div>
+        `).join('');
 
         // Switch to the dashboard
         document.getElementById('login-screen').classList.add('hidden');
@@ -49,4 +58,5 @@ document.getElementById('logout-button').addEventListener('click', () => {
     document.getElementById('login-screen').classList.remove('hidden');
     document.getElementById('dashboard').classList.add('hidden');
     document.getElementById('error-message').textContent = '';
+    document.getElementById('guild-list').innerHTML = '';  // Clear the guild list on logout
 });
