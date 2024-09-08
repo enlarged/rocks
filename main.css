@@ -1,46 +1,58 @@
+/* main.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #2C2F33;
-    color: #FFF;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-color: #f0f0f0;
 }
 
 #login-screen, #dashboard {
-    background-color: #23272A;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+#login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hidden {
     display: none;
 }
 
-input {
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 4px;
+#guild-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #7289DA;
-    color: #FFF;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.guild-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background-color: #5b6eae;
+.guild-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
-#error-message {
-    color: red;
+.guild-box p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333333;
 }
