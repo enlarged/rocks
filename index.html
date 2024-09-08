@@ -16,15 +16,19 @@
     </div>
 
     <div id="dashboard" class="hidden">
-        <h1>Welcome to Your Dashboard</h1>
-        <p><strong>User ID:</strong> <span id="user-id"></span></p>
-        <p><strong>Username:</strong> <span id="user-name"></span></p>
-        <p><strong>Servers (Guilds):</strong> <span id="server-count"></span></p>
-        <button id="logout-button">Logout</button>
-        
-        <div id="guild-list">
-            <!-- Guilds will be displayed here -->
+        <header>
+            <img id="user-avatar" src="" alt="User Avatar">
+            <h1 id="user-name"></h1>
+        </header>
+        <div id="sidebar">
+            <div id="guild-list"></div>
         </div>
+        <main>
+            <h1>Welcome to Your Dashboard</h1>
+            <p><strong>User ID:</strong> <span id="user-id"></span></p>
+            <p><strong>Servers (Guilds):</strong> <span id="server-count"></span></p>
+            <button id="logout-button">Logout</button>
+        </main>
     </div>
 </body>
 </html>
