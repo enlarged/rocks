@@ -1,0 +1,87 @@
+.hero-animation-ring-container.svelte-4qqhmb {
+    padding: 1px 1px 0;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    position: absolute;
+    inset: -1px;
+    z-index: 4;
+    border-radius: inherit;
+  }
+  .hero-animation-ring.svelte-4qqhmb {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    animation: svelte-4qqhmb-hero-animation 5s linear infinite;
+    bottom: -800px;
+    left: 0;
+    top: 769px;
+    background-image: linear-gradient(0deg, #6d2eff00, #919191, #fff);
+    opacity: 0.5;
+  }
+  @keyframes svelte-4qqhmb-hero-animation {
+    0% {
+      transform: translateZ(0) translate(-150px);
+    }
+    20% {
+      transform: translateZ(0) translate(-150px, -766px);
+    }
+    21% {
+      transform: translateZ(0) translate(-150px, -766px) rotate(45deg);
+    }
+    30% {
+      transform: translateZ(0) translate(150px, -916px) rotate(90deg);
+    }
+    46% {
+      transform: translateZ(0) translate(916px, -916px) rotate(90deg);
+    }
+    47% {
+      transform: translateZ(0) translate(916px, -916px) rotate(135deg);
+    }
+    54% {
+      transform: translateZ(0) translate(1066px, -616px) rotate(180deg);
+    }
+    73% {
+      transform: translateZ(0) translate(1066px) rotate(180deg);
+    }
+    to {
+      transform: translateZ(0) translate(1066px) rotate(180deg);
+    }
+  }
+  #card.svelte-hud6ym {
+    position: relative;
+  }
+  #card.svelte-hud6ym:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: radial-gradient(
+      1000px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+  }
+  #card.svelte-hud6ym:hover:before {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius);
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
