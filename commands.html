@@ -1,0 +1,372 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Command List</title>
+            <style>
+                body {
+                    background-color: black;
+                    color: white;
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                }
+                .category {
+                    margin-bottom: 30px;
+                }
+                .category-title {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 5px;
+                }
+                .command {
+                    margin-left: 20px;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+                .syntax {
+                    font-size: 14px;
+                    color: #8b949e;
+                    margin-left: 30px;
+                }
+            </style>
+        </head>
+        <body>
+        <div class="category"><div class="category-title">fun</div>
+                    <div class="command">
+                        animate - <span>Animate a message to be sent one letter at a time</span>
+                    </div>
+                    <div class="syntax">Syntax: animate <message></div>
+                    <div class="command">
+                        ascii - <span>Generate ASCII art</span>
+                    </div>
+                    <div class="syntax">Syntax: ascii <text></div>
+                    <div class="command">
+                        bmi - <span>Shows the body mass index (BMI)</span>
+                    </div>
+                    <div class="syntax">Syntax: bmi <height> <weight></div>
+                    <div class="command">
+                        coinflip - <span>Flip a coin</span>
+                    </div>
+                    <div class="syntax">Syntax: coinflip</div>
+                    <div class="command">
+                        hack - <span>Hack someone</span>
+                    </div>
+                    <div class="syntax">Syntax: hack <member></div>
+                    <div class="command">
+                        joke - <span>Get a random joke</span>
+                    </div>
+                    <div class="syntax">Syntax: joke</div>
+                    <div class="command">
+                        meme - <span>Get a random meme from Reddit</span>
+                    </div>
+                    <div class="syntax">Syntax: meme</div>
+                    <div class="command">
+                        parse - <span>Parse a message to be sent one letter at a time</span>
+                    </div>
+                    <div class="syntax">Syntax: parse <message></div>
+                    <div class="command">
+                        reverse - <span>Reverse a string</span>
+                    </div>
+                    <div class="syntax">Syntax: reverse <string></div>
+                    <div class="command">
+                        string - <span>Generate a random string</span>
+                    </div>
+                    <div class="syntax">Syntax: string <character amount></div>
+                    <div class="command">
+                        tweet - <span>Tweet something</span>
+                    </div>
+                    <div class="syntax">Syntax: tweet <message></div>
+                    <div class="command">
+                        uwuify - <span>UwUify a message</span>
+                    </div>
+                    <div class="syntax">Syntax: uwuify <message></div></div><div class="category"><div class="category-title">information</div>
+                    <div class="command">
+                        avatar - <span>Get the avatar of a user</span>
+                    </div>
+                    <div class="syntax">Syntax: avatar (user)</div>
+                    <div class="command">
+                        banner - <span>Get the banner of a member or yourself</span>
+                    </div>
+                    <div class="syntax">Syntax: banner <member></div>
+                    <div class="command">
+                        channelinfo - <span>Get information about the current channel</span>
+                    </div>
+                    <div class="syntax">Syntax: channelinfo</div>
+                    <div class="command">
+                        firstmessage - <span>Get a link for the first message in a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: firstmessage</div>
+                    <div class="command">
+                        help - <span>Displays a list of commands or information about a specific command.</span>
+                    </div>
+                    <div class="syntax">Syntax: -help [command/module]</div>
+                    <div class="command">
+                        iplookup - <span>Lookup an IP address</span>
+                    </div>
+                    <div class="syntax">Syntax: iplookup <ip></div>
+                    <div class="command">
+                        ping - <span>Get the bot's latency to discord</span>
+                    </div>
+                    <div class="syntax">Syntax: ping</div>
+                    <div class="command">
+                        serverinfo - <span>Get information about the current server</span>
+                    </div>
+                    <div class="syntax">Syntax: serverinfo</div>
+                    <div class="command">
+                        userinfo - <span>Get information about a user</span>
+                    </div>
+                    <div class="syntax">Syntax: userinfo <user></div>
+                    <div class="command">
+                        vanity - <span>Check if a vanity is available</span>
+                    </div>
+                    <div class="syntax">Syntax: vanity <vanity></div></div><div class="category"><div class="category-title">lastfm</div>
+                    <div class="command">
+                        lastfm - <span>Set your Last.fm username</span>
+                    </div>
+                    <div class="syntax">Syntax: lastfm <username></div>
+                    <div class="command">
+                        nowplaying - <span>View what you are currently playing</span>
+                    </div>
+                    <div class="syntax">Syntax: nowplaying</div>
+                    <div class="command">
+                        recent - <span>Shows your most recent tracks</span>
+                    </div>
+                    <div class="syntax">Syntax: recent</div>
+                    <div class="command">
+                        topartists - <span>View your top artists</span>
+                    </div>
+                    <div class="syntax">Syntax: topartists</div>
+                    <div class="command">
+                        toptracks - <span>View your top tracks</span>
+                    </div>
+                    <div class="syntax">Syntax: toptracks</div></div><div class="category"><div class="category-title">miscellaneous</div>
+                    <div class="command">
+                        giphy - <span>Search Giphy for a GIF</span>
+                    </div>
+                    <div class="syntax">Syntax: giphy <query></div>
+                    <div class="command">
+                        itemshop - <span>Get the current Fortnite item shop</span>
+                    </div>
+                    <div class="syntax">Syntax: itemshop</div>
+                    <div class="command">
+                        itunes - <span>Finds a song from the iTunes API</span>
+                    </div>
+                    <div class="syntax">Syntax: itunes <query></div>
+                    <div class="command">
+                        pokemon - <span>Get information about a PokÃ©mon</span>
+                    </div>
+                    <div class="syntax">Syntax: pokemon <name></div>
+                    <div class="command">
+                        soundcloud - <span>Search SoundCloud for song results</span>
+                    </div>
+                    <div class="syntax">Syntax: soundcloud <query></div>
+                    <div class="command">
+                        spotify - <span>Search spotify for a song</span>
+                    </div>
+                    <div class="syntax">Syntax: spotify <query></div>
+                    <div class="command">
+                        translate - <span>Translate a message</span>
+                    </div>
+                    <div class="syntax">Syntax: translate <language> <message></div>
+                    <div class="command">
+                        youtube - <span>Search YouTube for video results</span>
+                    </div>
+                    <div class="syntax">Syntax: youtube <query></div>
+                    <div class="command">
+                        chatgpt - <span>Generate text with prompts</span>
+                    </div>
+                    <div class="syntax">Syntax: gemini <prompt></div></div><div class="category"><div class="category-title">utility</div>
+                    <div class="command">
+                        google - <span>Search the largest search engine on the internet</span>
+                    </div>
+                    <div class="syntax">Syntax: google (search)</div>
+                    <div class="command">
+                        autoreact - <span>Automatically react to a user's messages with a specified emoji</span>
+                    </div>
+                    <div class="syntax">Syntax: autoreact <user> <emoji> [--stop]</div>
+                    <div class="command">
+                        autoreply - <span>Automatically reply to a user's messages with a specified message or a random pack message</span>
+                    </div>
+                    <div class="syntax">Syntax: autoreply <user> [message] [--stop]</div>
+                    <div class="command">
+                        tree - <span>Generate a tree structure of all commands and send it as an HTML file</span>
+                    </div>
+                    <div class="syntax">Syntax: tree</div>
+                    <div class="command">
+                        dm - <span>Send a direct message to a user</span>
+                    </div>
+                    <div class="syntax">Syntax: dm <user> <message></div>
+                    <div class="command">
+                        download - <span>Download a video from Facebook, Instagram, or TikTok</span>
+                    </div>
+                    <div class="syntax">Syntax: download <url></div>
+                    <div class="command">
+                        editsnipe - <span>View recently edited messages</span>
+                    </div>
+                    <div class="syntax">Syntax: editsnipe</div>
+                    <div class="command">
+                        evaluate - <span>Evaluate JavaScript code</span>
+                    </div>
+                    <div class="syntax">Syntax: evaluate <code></div>
+                    <div class="command">
+                        hastebin - <span>Upload content to Hastebin</span>
+                    </div>
+                    <div class="syntax">Syntax: hastebin <content> --name <name></div>
+                    <div class="command">
+                        image - <span>Search Google for an image</span>
+                    </div>
+                    <div class="syntax">Syntax: image <query></div>
+                    <div class="command">
+                        leave - <span>Make all clients and the bot leave the server</span>
+                    </div>
+                    <div class="syntax">Syntax: leave</div>
+                    <div class="command">
+                        mock - <span>Mock a user or stop mocking</span>
+                    </div>
+                    <div class="syntax">Syntax: mock <user|--stop></div>
+                    <div class="command">
+                        pack - <span>Chat pack a user</span>
+                    </div>
+                    <div class="syntax">Syntax: pack <number> (user)</div>
+                    <div class="command">
+                        pastes - <span>Retrieve a Hastebin link by name</span>
+                    </div>
+                    <div class="syntax">Syntax: pastes <name></div>
+                    <div class="command">
+                        pinterest - <span>Fetch pins from a Pinterest user</span>
+                    </div>
+                    <div class="syntax">Syntax: pinterest <username></div>
+                    <div class="command">
+                        poll - <span>Create a yes/no poll</span>
+                    </div>
+                    <div class="syntax">Syntax: poll <question></div>
+                    <div class="command">
+                        react - <span>React to a message</span>
+                    </div>
+                    <div class="syntax">Syntax: react <message id> <emoji></div>
+                    <div class="command">
+                        reload - <span>Reloads all commands.</span>
+                    </div>
+                    <div class="syntax">Syntax: reload</div>
+                    <div class="command">
+                        selfreact - <span>React to your recent messages with a certain reaction</span>
+                    </div>
+                    <div class="syntax">Syntax: selfreact <number> <reaction></div>
+                    <div class="command">
+                        snipe - <span>Snipe a deleted message</span>
+                    </div>
+                    <div class="syntax">Syntax: snipe</div>
+                    <div class="command">
+                        spam - <span>Spam a message in a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: spam <amount> <message> [--clients | --all]</div>
+                    <div class="command">
+                        timezone - <span>View a location's timezone</span>
+                    </div>
+                    <div class="syntax">Syntax: timezone <city></div>
+                    <div class="command">
+                        urban - <span>Get the definition of a word from Urban Dictionary</span>
+                    </div>
+                    <div class="syntax">Syntax: urban <word></div>
+                    <div class="command">
+                        wolfram - <span>Get math answers</span>
+                    </div>
+                    <div class="syntax">Syntax: wolfram <query></div>
+                    <div class="command">
+                        xray - <span>Relay messages from 1 server to another</span>
+                    </div>
+                    <div class="syntax">Syntax: xray <guild_id> <channel_id></div>
+                    <div class="command">
+                        zip - <span>Download all emojis and send in zip</span>
+                    </div>
+                    <div class="syntax">Syntax: zip</div>
+                    <div class="command">
+                        editrecent - <span>Edit the most recent message sent by the bot to the given content</span>
+                    </div>
+                    <div class="syntax">Syntax: editrecent <new content></div></div><div class="category"><div class="category-title">moderation</div>
+                    <div class="command">
+                        addrole - <span>Add a role to a user</span>
+                    </div>
+                    <div class="syntax">Syntax: addrole <user> <role></div>
+                    <div class="command">
+                        ban - <span>Ban a user</span>
+                    </div>
+                    <div class="syntax">Syntax: ban <user> (reason)</div>
+                    <div class="command">
+                        create - <span>Create a text channel</span>
+                    </div>
+                    <div class="syntax">Syntax: create <name></div>
+                    <div class="command">
+                        createrole - <span>Create a role</span>
+                    </div>
+                    <div class="syntax">Syntax: createrole <name> (color)</div>
+                    <div class="command">
+                        delete - <span>Delete a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: delete <channel></div>
+                    <div class="command">
+                        deleterole - <span>Delete a role</span>
+                    </div>
+                    <div class="syntax">Syntax: deleterole <role></div>
+                    <div class="command">
+                        gname - <span>Set the name of a guild</span>
+                    </div>
+                    <div class="syntax">Syntax: gname <name></div>
+                    <div class="command">
+                        hide - <span>Hide a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: hide</div>
+                    <div class="command">
+                        kick - <span>Kick a user</span>
+                    </div>
+                    <div class="syntax">Syntax: kick <user> (reason)</div>
+                    <div class="command">
+                        lock - <span>Lock a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: lock</div>
+                    <div class="command">
+                        nuke - <span>Nuke a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: nuke</div>
+                    <div class="command">
+                        rainbowrole - <span>Create a rainbow role</span>
+                    </div>
+                    <div class="syntax">Syntax: rainbowrole <role> [--stop]</div>
+                    <div class="command">
+                        rolecolor - <span>Change the color of a role</span>
+                    </div>
+                    <div class="syntax">Syntax: rolecolor <role> <color></div>
+                    <div class="command">
+                        slowmode - <span>Set the slowmode of a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: slowmode <time></div>
+                    <div class="command">
+                        strip - <span>Strip all roles from a member</span>
+                    </div>
+                    <div class="syntax">Syntax: strip <user></div>
+                    <div class="command">
+                        topic - <span>Set the topic of a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: topic <topic></div>
+                    <div class="command">
+                        unban - <span>Unban a user from the server</span>
+                    </div>
+                    <div class="syntax">Syntax: unban <user> (reason)</div>
+                    <div class="command">
+                        unbanall - <span>Unban all banned members in the server</span>
+                    </div>
+                    <div class="syntax">Syntax: unbanall</div>
+                    <div class="command">
+                        unhide - <span>Unhide a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: unhide</div>
+                    <div class="command">
+                        unlock - <span>Unlock a channel</span>
+                    </div>
+                    <div class="syntax">Syntax: unlock</div></div>
+        </body>
+        </html>
