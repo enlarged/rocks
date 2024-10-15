@@ -1,283 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="https://lains.win/avatar.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css/0.0jfqfYD_.css">
-    <link rel="stylesheet" type="text/css" href="css/2.cHMRP26Y.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Landing Page</title>
     <style>
-      #overlay {
-          display: none;
-          position: fixed;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: rgba(0, 0, 0, 0.5);
-      }
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
 
-      .modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    z-index: 1000;
-    color: #fff;
-    font-size: 15px;
-}
+        .container {
+            text-align: center;
+        }
 
-.modal h2 {
-    color: #00bfff;
-    font-size: 18px;
-}
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
 
-.modal p {
-    margin-bottom: 10px;
-    font-size: 15px;
-}
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-.modal button {
-    margin-top: 10px;
-    background-color: #0a0a0a;
-    color: #fff;
-    ping: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+        .button {
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
 
-.modal button:hover {
-    background-color: #0090e5;
-}
+        .button:hover {
+            box-shadow: 0 0 15px white, 0 0 30px white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./lone.png" alt="Bot Logo" class="logo">
 
-.modal p span {
-      display: inline-block;
-      background-color: #2d2d2d;
-      padding: 4px 8px;
-      border-radius: 5px;
-      margin-right: 8px;
-      font-size: 15px;
-      width: 400px;
-  }
-
-  </style>
-  </head>
-  </style>
-  <body data-sveltekit-preload-data="hover">
-    <div style="display: contents"> 
-      <div class="overflow-x-hidden">
-        <div class="flex min-h-screen flex-col select-none">
-          <header class="container z-40 bg-background">
-            <div class="flex h-20 items-center justify-between py-6">
-              <div class="flex gap-6 md:gap-10">
-                <a class="items-center space-x-2 flex" href="/" data-svelte-h="svelte-x8861f">
-                  <span class="font-bold inline-block">lone</span>
-                </a>
-                <nav class="gap-6 flex">
-                  <a class="hidden sm:flex items-center text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="#features" data-svelte-h="svelte-1wmqbz9">Features</a>
-                  <a class="hidden sm:flex items-center text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="#information" data-svelte-h="svelte-1w3ppfb">Information</a>
-                  <a class="hidden sm:flex items-center text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="commands.txt" data-svelte-h="svelte-1tkathd">Commands</a>
-                </nav>
-              </div>
-			  <nav>
-				<a href="https://discord.com/oauth2/authorize?client_id=1110011733382287411&permissions=8&scope=bot"
-				   tabindex="0"
-				   class="inline-flex items-center justify-center font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"
-				   data-bits-button-root="">
-				  Add to Your Server
-				</a>
-			  </nav>			  
-            </div>
-          </header>
-          <main class="flex-1">
-            <div id="__saos-0.014997553212974912__">
-              <div style="animation: fade-in-bottom 0.25s cubic-bezier(0.35, 0.5, 0.65, 0.95) both; ">
-                <section class="space-y-6 pb-8 pt-6 md:py-24 lg:py-16" data-svelte-h="svelte-lspgbm">
-                  <div class="container flex max-w-[64rem] flex-col md:items-center gap-2 md:text-center items-start text-start">
-                    <a class="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium hover:bg-muted/75 transition-colors duration-200" target="_blank" href="https://discord.gg/okay">Join the support server</a>
-                    <h1 class="text-3xl leading-[1.1] sm:text-3xl md:text-6xl font-bold">The next generation of Discord self bots</h1>
-                    <p class="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">lone is a next-generation discord self bot for enhancing your experience and bring joy to your server.</p>
-                    <div class="relative hidden xl:block xl:col-span-7 xl:row-span-2 mt-16 -mb-32" aria-hidden="true">
-                        </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-            <div id="__saos-0.7039295122848186__">
-              <div style="animation: fade-in-bottom 0.25s cubic-bezier(0.35, 0.5, 0.65, 0.95) both; ">
-                <section id="features" class="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
-                  <div class="mx-auto flex max-w-[58rem] flex-col md:items-center md:space-y-4 md:text-center items-start text-start" data-svelte-h="svelte-wwrmeb">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Lone provides unique features</h2>
-                  </div>
-                  <div class="mx-auto grid justify-center gap-4 md:grid-cols-2 md:max-w-[64rem]" id="cards">
-					<div class="relative overflow-hidden rounded-lg border bg-background p-2 col-span-1 svelte-hud6ym" id="card">
-						<div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-10 w-10 border-2 border-card bg-card text-white" stroke-width="12.5">
-								<path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z" fill="white"/>
-							</svg>							
-						  <div class="space-y-2">
-							<h3 class="font-bold">Moderation</h3>
-							<p class="text-sm text-muted-foreground">Advanced Moderation, with a variety of features.</p>
-						  </div>
-						</div>
-					  </div>																	  
-                    <div class="relative overflow-hidden rounded-lg border bg-background p-2 col-span-1 svelte-hud6ym" id="card" data-svelte-h="svelte-ww3n0u">
-                      <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-webhook h-10 w-10 border-2 border-card bg-card">
-							<path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"></path>
-							<path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"></path>
-							<path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"></path>
-						</svg>
-                        <div class="space-y-2">
-								<h3 class="font-bold">X-ray</h3>
-								<p class="text-sm text-muted-foreground">Automatically relay messages from one server to another</p>
-							</div>
-						</div>
-					</div>
-					<div class="relative overflow-hidden rounded-lg border bg-background p-2 col-span-1" id="card">
-						<div class="flex h-[150px] flex-col justify-between rounded-md p-6">
-							<div class="flex flex-row items-center -space-x-4">
-							</div>
-							<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-10 w-10 border-2 border-card bg-card" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-								<path d="M225.8 367.1l-18.8-51s-30.5 34-76.2 34c-40.5 0-69.2-35.2-69.2-91.5 0-72.1 36.4-97.9 72.1-97.9 66.5 0 74.8 53.3 100.9 134.9 18.8 56.9 54 102.6 155.4 102.6 72.7 0 122-22.3 122-80.9 0-72.9-62.7-80.6-115-92.1-25.8-5.9-33.4-16.4-33.4-34 0-19.9 15.8-31.7 41.6-31.7 28.2 0 43.4 10.6 45.7 35.8l58.6-7c-4.7-52.8-41.1-74.5-100.9-74.5-52.8 0-104.4 19.9-104.4 83.9 0 39.9 19.4 65.1 68 76.8 44.9 10.6 79.8 13.8 79.8 45.7 0 21.7-21.1 30.5-61 30.5-59.2 0-83.9-31.1-97.9-73.9-32-96.8-43.6-163-161.3-163C45.7 113.8 0 168.3 0 261c0 89.1 45.7 137.2 127.9 137.2 66.2 0 97.9-31.1 97.9-31.1z"></path>
-							</svg>
-                        <div class="space-y-2" data-svelte-h="svelte-pbwvi2">
-								<h3 class="font-bold">Media Integration</h3>
-								<p class="text-sm text-muted-foreground">Find and search for songs through last.fm & applications such as spotify & soundcloud</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg border bg-background p-2 col-span-1 svelte-hud6ym" id="card">
-                      <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring h-10 w-10 border-2 border-card bg-card">
-							<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
-							<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
-							<path d="M4 2C2.8 3.7 2 5.7 2 8"></path>
-							<path d="M22 8c0-2.3-.8-4.3-2-6"></path>
-						</svg>
-                        <div class="space-y-2" data-svelte-h="svelte-16d4qhm">
-                          <h3 class="font-bold">Socials Reposting</h3>
-                          <p class="text-sm text-muted-foreground">Fine tune reposters which can be used in your server.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-            <div id="__saos-0.7957869155119639__">
-              <div style="animation: fade-in-bottom 0.25s cubic-bezier(0.35, 0.5, 0.65, 0.95) both; ">
-                <section id="information" class="container flex flex-col gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
-                  <div class="mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]" data-svelte-h="svelte-6o2t7z">
-                    <h2 class="text-3xl leading-[1.1] sm:text-3xl md:text-6xl font-bold">Use lone with your discord account</h2>
-                  </div>
-                  <div class="grid w-full items-start gap-10 rounded-lg border p-10 md:grid-cols-[1fr_200px]">
-                    <div class="grid gap-6">
-                      <h3 class="text-xl font-bold sm:text-2xl" data-svelte-h="svelte-rd8m52">What lone has to offer:</h3>
-                      <ul class="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-                        <li class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg> Amazing support
-                        </li>
-                        <li class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg> Access to all available features
-                        </li>
-                        <li class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg> No paywalls
-                        </li>
-                        <li class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg> Self-hosted, on and off as you please
-                        </li>
-                        <li class="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg> Easy to use
-                        </li>
-                        <li class="flex items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-check w-4 h-4 mr-2">
-							 <polyline points="20 6 9 17 4 12"></polyline>
-							</svg> Maintained/updated daily
-						  </li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-                  <div class="mx-auto flex w-full max-w-[58rem] flex-col gap-2">
-                  </div>
-                </section>
-              </div>
-            </div>
-          </main>
-          <footer>
-            <div class="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-              <div class="flex flex-col items-start justify-center" data-svelte-h="svelte-f58wd9">
-                <a href="https://discord.gg/okay" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 text-sm font-mono text-muted-foreground underline hover:text-secondary-foreground">@discord</a>
-                </a>
-              </div>
-              <div class="flex flex-col items-start px-8 md:px-0">
-                <p class="text-center md:text-start text-sm leading-snug text-muted-foreground font-mono"></p>
-              </div>
-              <script>
-                function copyToClipboard(elementId) {
-                  var range = document.createRange();
-                  var element = document.getElementById(elementId);
-                  range.selectNode(element);
-                  window.getSelection().removeAllRanges();
-                  window.getSelection().addRange(range);
-                  document.execCommand('copy');
-                  window.getSelection().removeAllRanges();
-                  var copyNotification = document.getElementById('copyNotification');
-                  copyNotification.style.display = 'block';
-                  setTimeout(function () {
-                    copyNotification.style.display = 'none';
-                  }, 4000);
-                }
-                function openModal() {
-                  var modal = document.getElementById('myModal');
-                  modal.style.display = 'block';
-                }
-                function closeModal() {
-                  var modal = document.getElementById('myModal');
-                  modal.style.display = 'none';
-                }
-                window.onclick = function (event) {
-                  var modal = document.getElementById('myModal');
-                  if (event.target === modal) {
-                    modal.style.display = 'none';
-                  }
-                };
-              </script>
-<script>
-  function copyToClipboard(elementId) {
-      var copyText = document.getElementById(elementId);
-      var textArea = document.createElement("textarea");
-      textArea.value = copyText.textContent;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      var notification = document.getElementById("copyNotification");
-      notification.style.display = "block";
-      setTimeout(function () {
-          notification.style.display = "none";
-      }, 4000);
-  }
-</script>   
-  </body>
+        <div class="buttons">
+            <a href="/download" class="button">Download</a>
+            <a href="/discord" class="button">Support</a>
+            <a href="/commands" class="button">Cmds</a>
+        </div>
+    </div>
+</body>
 </html>
