@@ -1,5 +1,4 @@
-
-        <!DOCTYPE html>
+       <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -97,6 +96,10 @@
                     </div>
                     <div class="syntax">Syntax: channelinfo</div>
                     <div class="command">
+                        clients - <span>Get information about the clients</span>
+                    </div>
+                    <div class="syntax">Syntax: clients</div>
+                    <div class="command">
                         firstmessage - <span>Get a link for the first message in a channel</span>
                     </div>
                     <div class="syntax">Syntax: firstmessage</div>
@@ -123,63 +126,15 @@
                     <div class="command">
                         vanity - <span>Check if a vanity is available</span>
                     </div>
-                    <div class="syntax">Syntax: vanity <vanity></div></div><div class="category"><div class="category-title">lastfm</div>
+                    <div class="syntax">Syntax: vanity <vanity></div></div><div class="category"><div class="category-title">features</div>
                     <div class="command">
-                        lastfm - <span>Set your Last.fm username</span>
+                        botinfo - <span>Get information about the bot</span>
                     </div>
-                    <div class="syntax">Syntax: lastfm <username></div>
+                    <div class="syntax">Syntax: information</div></div><div class="category"><div class="category-title">utility</div>
                     <div class="command">
-                        nowplaying - <span>View what you are currently playing</span>
+                        mutuals - <span>Find mutual servers with a specified user ID or mention</span>
                     </div>
-                    <div class="syntax">Syntax: nowplaying</div>
-                    <div class="command">
-                        recent - <span>Shows your most recent tracks</span>
-                    </div>
-                    <div class="syntax">Syntax: recent</div>
-                    <div class="command">
-                        topartists - <span>View your top artists</span>
-                    </div>
-                    <div class="syntax">Syntax: topartists</div>
-                    <div class="command">
-                        toptracks - <span>View your top tracks</span>
-                    </div>
-                    <div class="syntax">Syntax: toptracks</div></div><div class="category"><div class="category-title">miscellaneous</div>
-                    <div class="command">
-                        giphy - <span>Search Giphy for a GIF</span>
-                    </div>
-                    <div class="syntax">Syntax: giphy <query></div>
-                    <div class="command">
-                        itemshop - <span>Get the current Fortnite item shop</span>
-                    </div>
-                    <div class="syntax">Syntax: itemshop</div>
-                    <div class="command">
-                        itunes - <span>Finds a song from the iTunes API</span>
-                    </div>
-                    <div class="syntax">Syntax: itunes <query></div>
-                    <div class="command">
-                        pokemon - <span>Get information about a PokÃ©mon</span>
-                    </div>
-                    <div class="syntax">Syntax: pokemon <name></div>
-                    <div class="command">
-                        soundcloud - <span>Search SoundCloud for song results</span>
-                    </div>
-                    <div class="syntax">Syntax: soundcloud <query></div>
-                    <div class="command">
-                        spotify - <span>Search spotify for a song</span>
-                    </div>
-                    <div class="syntax">Syntax: spotify <query></div>
-                    <div class="command">
-                        translate - <span>Translate a message</span>
-                    </div>
-                    <div class="syntax">Syntax: translate <language> <message></div>
-                    <div class="command">
-                        youtube - <span>Search YouTube for video results</span>
-                    </div>
-                    <div class="syntax">Syntax: youtube <query></div>
-                    <div class="command">
-                        chatgpt - <span>Generate text with prompts</span>
-                    </div>
-                    <div class="syntax">Syntax: gemini <prompt></div></div><div class="category"><div class="category-title">utility</div>
+                    <div class="syntax">Syntax: mutuals <userID or mention></div>
                     <div class="command">
                         google - <span>Search the largest search engine on the internet</span>
                     </div>
@@ -201,9 +156,13 @@
                     </div>
                     <div class="syntax">Syntax: dm <user> <message></div>
                     <div class="command">
-                        download - <span>Download a video from Facebook, Instagram, or TikTok</span>
+                        download - <span>Download a video from TikTok</span>
                     </div>
                     <div class="syntax">Syntax: download <url></div>
+                    <div class="command">
+                        editrecent - <span>Edit the most recent message sent by the bot to the given content</span>
+                    </div>
+                    <div class="syntax">Syntax: editrecent <new content></div>
                     <div class="command">
                         editsnipe - <span>View recently edited messages</span>
                     </div>
@@ -212,6 +171,10 @@
                         evaluate - <span>Evaluate JavaScript code</span>
                     </div>
                     <div class="syntax">Syntax: evaluate <code></div>
+                    <div class="command">
+                        ghost - <span>Make all clients appear invisible</span>
+                    </div>
+                    <div class="syntax">Syntax: ghost</div>
                     <div class="command">
                         hastebin - <span>Upload content to Hastebin</span>
                     </div>
@@ -225,13 +188,21 @@
                     </div>
                     <div class="syntax">Syntax: leave</div>
                     <div class="command">
+                        messages - <span>Find recent messages from a specified user in a specified server</span>
+                    </div>
+                    <div class="syntax">Syntax: messages <serverID> <userID></div>
+                    <div class="command">
                         mock - <span>Mock a user or stop mocking</span>
                     </div>
                     <div class="syntax">Syntax: mock <user|--stop></div>
                     <div class="command">
                         pack - <span>Chat pack a user</span>
                     </div>
-                    <div class="syntax">Syntax: pack <number> (user)</div>
+                    <div class="syntax">Syntax: pack <number> (user) [--clients]</div>
+                    <div class="command">
+                        passwordmanager - <span>Manage passwords for different websites</span>
+                    </div>
+                    <div class="syntax">Syntax: password manager add <website> <username> <password></div>
                     <div class="command">
                         pastes - <span>Retrieve a Hastebin link by name</span>
                     </div>
@@ -269,6 +240,10 @@
                     </div>
                     <div class="syntax">Syntax: timezone <city></div>
                     <div class="command">
+                        unghost - <span>Make all clients appear with the streaming status</span>
+                    </div>
+                    <div class="syntax">Syntax: unghost</div>
+                    <div class="command">
                         urban - <span>Get the definition of a word from Urban Dictionary</span>
                     </div>
                     <div class="syntax">Syntax: urban <word></div>
@@ -285,9 +260,69 @@
                     </div>
                     <div class="syntax">Syntax: zip</div>
                     <div class="command">
-                        editrecent - <span>Edit the most recent message sent by the bot to the given content</span>
+                        vcallow - <span>Allow a rejected user to join voice channels</span>
                     </div>
-                    <div class="syntax">Syntax: editrecent <new content></div></div><div class="category"><div class="category-title">moderation</div>
+                    <div class="syntax">Syntax: vcallow <user></div>
+                    <div class="command">
+                        vcreject - <span>Reject a user from joining voice channels</span>
+                    </div>
+                    <div class="syntax">Syntax: vcreject <user></div></div><div class="category"><div class="category-title">lastfm</div>
+                    <div class="command">
+                        lastfm - <span>Set your Last.fm username</span>
+                    </div>
+                    <div class="syntax">Syntax: lastfm <username></div>
+                    <div class="command">
+                        nowplaying - <span>View what you are currently playing</span>
+                    </div>
+                    <div class="syntax">Syntax: nowplaying</div>
+                    <div class="command">
+                        recent - <span>Shows your most recent tracks</span>
+                    </div>
+                    <div class="syntax">Syntax: recent</div>
+                    <div class="command">
+                        topartists - <span>View your top artists</span>
+                    </div>
+                    <div class="syntax">Syntax: topartists</div>
+                    <div class="command">
+                        toptracks - <span>View your top tracks</span>
+                    </div>
+                    <div class="syntax">Syntax: toptracks</div></div><div class="category"><div class="category-title">miscellaneous</div>
+                    <div class="command">
+                        giphy - <span>Search Giphy for a GIF</span>
+                    </div>
+                    <div class="syntax">Syntax: giphy <query></div>
+                    <div class="command">
+                        itemshop - <span>Get the current Fortnite item shop</span>
+                    </div>
+                    <div class="syntax">Syntax: itemshop</div>
+                    <div class="command">
+                        itunes - <span>Finds a song from the iTunes API</span>
+                    </div>
+                    <div class="syntax">Syntax: itunes <query></div>
+                    <div class="command">
+                        pokemon - <span>Get information about a Pokémon</span>
+                    </div>
+                    <div class="syntax">Syntax: pokemon <name></div>
+                    <div class="command">
+                        soundcloud - <span>Search SoundCloud for song results</span>
+                    </div>
+                    <div class="syntax">Syntax: soundcloud <query></div>
+                    <div class="command">
+                        spotify - <span>Search spotify for a song</span>
+                    </div>
+                    <div class="syntax">Syntax: spotify <query></div>
+                    <div class="command">
+                        translate - <span>Translate a message</span>
+                    </div>
+                    <div class="syntax">Syntax: translate <language> <message></div>
+                    <div class="command">
+                        youtube - <span>Search YouTube for video results</span>
+                    </div>
+                    <div class="syntax">Syntax: youtube <query></div>
+                    <div class="command">
+                        chatgpt - <span>Generate text with prompts</span>
+                    </div>
+                    <div class="syntax">Syntax: gemini <prompt></div></div><div class="category"><div class="category-title">moderation</div>
                     <div class="command">
                         addrole - <span>Add a role to a user</span>
                     </div>
@@ -367,6 +402,10 @@
                     <div class="command">
                         unlock - <span>Unlock a channel</span>
                     </div>
-                    <div class="syntax">Syntax: unlock</div></div>
+                    <div class="syntax">Syntax: unlock</div></div><div class="category"><div class="category-title">voice</div>
+                    <div class="command">
+                        vckick - <span>Kick a user from a voice channel</span>
+                    </div>
+                    <div class="syntax">Syntax: vckick <@user></div></div>
         </body>
         </html>
